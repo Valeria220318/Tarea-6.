@@ -3,54 +3,34 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
 class UsuarioSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
-        // Crear un administrador
         User::create([
-            'name' => 'Admin User',
-            'email' => 'admin@example.com',
-            'password' => bcrypt('password'),
-            'role' => 'admin',
+            'name' => 'Admon',
+            'email' => 'admon@robotics.com',
+            'password' => Hash::make('Adm@2022'),
+            'role' => 'Administrativo',
         ]);
 
-        // Crear docentes
         User::create([
-            'name' => 'Docente 1',
-            'email' => 'docente1@example.com',
-            'password' => bcrypt('password'),
-            'role' => 'docente',
+            'name' => 'Tecmilenio',
+            'email' => 'tecmilenio@robotics.com',
+            'password' => Hash::make('Adm@2022'),
+            'role' => 'Profesor',
         ]);
-        
+
         User::create([
-            'name' => 'Docente 2',
-            'email' => 'docente2@example.com',
-            'password' => bcrypt('password'),
-            'role' => 'docente',
-        ]);
-        
-        // Crear estudiantes
-        User::create([
-            'name' => 'Estudiante 1',
-            'email' => 'estudiante1@example.com',
-            'password' => bcrypt('password'),
-            'role' => 'estudiante',
-        ]);
-        
-        User::create([
-            'name' => 'Estudiante 2',
-            'email' => 'estudiante2@example.com',
-            'password' => bcrypt('password'),
-            'role' => 'estudiante',
+            'name' => 'Estudiante',
+            'email' => 'student@robotics.com',
+            'password' => Hash::make('Adm@2022'),
+            'role' => 'Estudiante',
         ]);
     }
 }
+
 
