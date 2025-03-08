@@ -12,11 +12,12 @@ class CursoFactory extends Factory
     public function definition()
     {
         return [
-            'nombre' => $this->faker->word(),
-            'descripcion' => $this->faker->sentence(),
-            'duracion' => $this->faker->randomNumber(2),
-            'precio' => $this->faker->randomFloat(2, 100, 1000),
+            'nombreCurso' => $this->faker->sentence(3), 
+            'caratula' => $this->faker->imageUrl(640, 480, 'tech', true), 
+            'contenido' => $this->faker->paragraph(), 
+            'kitDeRobot' => $this->faker->randomElement(['StarterKit', 'Educational Robotics Kit', 'Kit5']), 
         ];
     }
 }
+
 
