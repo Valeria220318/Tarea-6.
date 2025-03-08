@@ -16,8 +16,7 @@ class CreateKitRoboticaTable extends Migration
 
                 // Relaciones con las tablas correspondientes
                 $table->foreign('curso_id')->references('id')->on('cursos')->onDelete('cascade'); 
-                $table->foreign('kit_id')->references('kitID')->on('kits_robotica')->onDelete('cascade'); 
-
+                $table->foreign('kit_id')->references('id')->on('kits_robotica')->onDelete('cascade');
                 $table->timestamps();
             });
         }
@@ -30,14 +29,5 @@ class CreateKitRoboticaTable extends Migration
 }
 
 
-class KitsRobotica extends Model
-{
-    use HasFactory;
 
-    // Relación entre KitsRobotica y Curso
-    public function cursos()
-    {
-        return $this->hasMany(Curso::class, 'kitDeRobot_id');
-    }
-}
 
