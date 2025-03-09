@@ -29,7 +29,16 @@ class CreateMaterialDidacticoTable extends Migration
     }
 }
 
+class MaterialDidactico extends Model
+{
+    use HasFactory;
 
+    // Relación: Un material didáctico pertenece a un curso
+    public function curso()
+    {
+        return $this->belongsTo(Curso::class, 'cursoID');
+    }
+}
 
 
 
