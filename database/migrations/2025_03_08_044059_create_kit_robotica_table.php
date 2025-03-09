@@ -28,6 +28,15 @@ class CreateKitRoboticaTable extends Migration
     }
 }
 
+class KitsRobotica extends Model
+{
+    use HasFactory;
 
+    // Relación entre KitsRobotica y Curso
+    public function cursos()
+    {
+        return $this->hasMany(Curso::class, 'kitDeRobot_id');
+    }
+}
 
 
