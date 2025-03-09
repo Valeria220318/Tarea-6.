@@ -16,3 +16,4 @@ Este proyecto tiene como objetivo desarrollar un sistema de gestión para una in
 ![Diagrama ER](DiagramaER.png)
 
 El diagrama ER muestra las entidades principales del sistema: **Usuarios**, **Grupos**, **Kits de Robótica**, **Cursos** y sus relaciones.
+
