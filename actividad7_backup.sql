@@ -65,3 +65,17 @@ CREATE TABLE CursosKits (
     FOREIGN KEY (cursoID) REFERENCES Cursos(cursoID),
     FOREIGN KEY (kitID) REFERENCES KitsRobotica(kitID)
 );
+
+-- Insertar usuarios
+INSERT INTO Usuarios (nombre, email, rol)
+VALUES
+    ('Admon', 'admon@robotics.com', 'Administrativo'),
+    ('Tecmilenio', 'tecmilenio@robotics.com', 'Docente'),
+    ('Estudiante', 'student@robotics.com', 'Estudiante');
+
+-- Insertar kits de robótica
+INSERT INTO KitsRobotica (nombreKit, contenidoKit)
+VALUES
+    ('Kit Básico', 'Kit para iniciantes en robótica'),
+    ('Kit Avanzado', 'Kit avanzado con sensores y motores'),
+    ('Kit Educativo', 'Kit para proyectos educativos en robótica');
